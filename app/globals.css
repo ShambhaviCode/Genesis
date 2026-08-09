@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #0e1116;
+  color: #edeff2;
+}
+
+body {
+  background-image: radial-gradient(circle at 15% 0%, rgba(255, 138, 61, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(94, 234, 212, 0.06), transparent 40%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #ff8a3d;
+  color: #0e1116;
+}
+
+:focus-visible {
+  outline: 2px solid #5eead4;
+  outline-offset: 2px;
+}
+
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
