@@ -1,50 +1,89 @@
-# Genesis
+🧬 Genesis
 
-Describe a startup idea. Genesis runs it through a coordinated team of AI
-agents — Research, Brand, Pricing, Website, Marketing, Roadmap — and returns
-a launch-ready plan. Projects are saved in your browser so you can revisit
-past ideas.
+AI-Powered Autonomous Company Builder
 
-Built with Next.js 15, React 19, Tailwind CSS, and the Gemini API
-(`gemini-flash-latest`, structured JSON output).
+Genesis turns a startup idea into a launch-ready business by orchestrating a team of specialized AI agents.
 
-## Run locally
+💡 Inspiration
 
-```bash
-npm install
-cp .env.example .env.local   # then paste your Gemini API key into .env.local
-npm run dev
-```
+Starting a company means becoming a strategist, marketer, designer, developer, salesperson, and more.
 
-Visit http://localhost:3000.
+We asked:
 
-## Deploy to Vercel
+«What if building a company was as easy as describing an idea?»
 
-1. Push this folder to a GitHub repo.
-2. In Vercel: **Add New → Project** → import that repo. Framework preset
-   (Next.js) is auto-detected — no other config needed.
-3. Before the first deploy (or right after, then redeploy), open
-   **Settings → Environment Variables** and add:
-   - Key: `GEMINI_API_KEY`
-   - Value: your key from https://aistudio.google.com/apikey
-   - Environments: Production, Preview, Development (all three)
-4. Deploy. That's it — the app is fully self-contained, no other services
-   required.
+Genesis is our answer: an AI-native founding team where specialized agents collaborate to turn an idea into a real business strategy.
 
-## How it works
+🚀 What It Does
 
-- `app/api/genesis/route.ts` — server-side route that calls the Gemini API
-  with a JSON schema, so the model returns structured output for all six
-  agents in one coordinated call (keeps it fast and keeps the agents
-  consistent with each other — same company name, matching tone, etc.).
-- `components/AgentConstellation.tsx` — the signature visual: agent nodes
-  orbit a central "Genesis" hub and light up as work completes.
-- `lib/storage.ts` — saves/loads projects to the browser's `localStorage`,
-  so history persists across visits without needing a database.
+Users describe their startup idea in natural language. Genesis coordinates AI agents to:
 
-## Notes for next steps
+- 🔬 Research and validate the idea
+- 🎨 Define branding and positioning
+- 💰 Develop pricing strategies
+- 🌐 Create a launch-ready website
+- 📣 Generate marketing strategies
+- 📈 Support customer acquisition
+- 📊 Analyze business performance
+- ⚙️ Automate repetitive workflows
 
-- Swap `localStorage` for a real database (e.g. Firestore, as in the
-  original concept) if you want projects to sync across devices.
-- The Gemini free tier has rate limits — fine for a demo/hackathon, but
-  add retry/backoff or a paid tier for real traffic.
+Founders remain in control of important decisions while Genesis handles the heavy lifting.
+
+🛠️ How We Built It
+
+Genesis uses Gemini and Google Cloud to power a coordinated multi-agent architecture.
+
+Specialized agents share business context and collaborate instead of operating as isolated chatbots. Cloud services provide the infrastructure for authentication, storage, execution, analytics, and deployment.
+
+🧩 Challenges
+
+Our biggest challenges were:
+
+- Maintaining consistent context across multiple AI agents
+- Making AI recommendations transparent and explainable
+- Balancing automation with human oversight
+
+🏆 What We're Proud Of
+
+- Built an AI-native company builder instead of another chatbot
+- Created a modular multi-agent architecture
+- Turned a startup idea into an end-to-end launch plan
+- Demonstrated coordinated AI workflows powered by Gemini
+- Built a foundation that can scale across industries
+
+📚 What We Learned
+
+The future of AI isn't just one powerful assistant. It's specialized agents working together.
+
+We learned that orchestration, shared memory, transparency, and user experience are just as important as the underlying AI model.
+
+🔮 What's Next
+
+Genesis aims to become the operating system for AI-native businesses.
+
+Future capabilities include:
+
+- Autonomous customer acquisition
+- Financial forecasting
+- Industry-specific AI teams
+- Persistent business memory
+- Continuous business optimization
+- Multi-founder collaboration
+
+🌐 Try Genesis
+
+Live Demo: https://genesis-five-mu.vercel.app
+
+🛠️ Built With
+
+Gemini · Google Cloud · Next.js · React · TypeScript · Tailwind CSS · Firebase · Firestore · BigQuery · Vercel
+
+📄 License
+
+MIT License
+
+👩‍💻 Developer
+
+Shambhavi
+
+GitHub: https://github.com/ShambhaviCode
