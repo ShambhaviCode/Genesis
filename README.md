@@ -1,20 +1,20 @@
-🧬 Genesis
+# 🧬 Genesis
 
-AI-Powered Autonomous Company Builder
+**AI-Powered Autonomous Company Builder**
 
 Genesis turns a startup idea into a launch-ready business by orchestrating a team of specialized AI agents.
 
-💡 Inspiration
+## 💡 Inspiration
 
 Starting a company means becoming a strategist, marketer, designer, developer, salesperson, and more.
 
 We asked:
 
-«What if building a company was as easy as describing an idea?»
+> **What if building a company was as easy as describing an idea?**
 
 Genesis is our answer: an AI-native founding team where specialized agents collaborate to turn an idea into a real business strategy.
 
-🚀 What It Does
+## 🚀 What It Does
 
 Users describe their startup idea in natural language. Genesis coordinates AI agents to:
 
@@ -29,13 +29,13 @@ Users describe their startup idea in natural language. Genesis coordinates AI ag
 
 Founders remain in control of important decisions while Genesis handles the heavy lifting.
 
-🛠️ How We Built It
+## 🛠️ How We Built It
 
-Genesis uses Gemini and Google Cloud to power a coordinated multi-agent architecture.
+Genesis uses **Gemini and Google Cloud** to power a coordinated multi-agent architecture.
 
 Specialized agents share business context and collaborate instead of operating as isolated chatbots. Cloud services provide the infrastructure for authentication, storage, execution, analytics, and deployment.
 
-🧩 Challenges
+## 🧩 Challenges
 
 Our biggest challenges were:
 
@@ -43,7 +43,7 @@ Our biggest challenges were:
 - Making AI recommendations transparent and explainable
 - Balancing automation with human oversight
 
-🏆 What We're Proud Of
+## 🏆 What We're Proud Of
 
 - Built an AI-native company builder instead of another chatbot
 - Created a modular multi-agent architecture
@@ -51,15 +51,15 @@ Our biggest challenges were:
 - Demonstrated coordinated AI workflows powered by Gemini
 - Built a foundation that can scale across industries
 
-📚 What We Learned
+## 📚 What We Learned
 
-The future of AI isn't just one powerful assistant. It's specialized agents working together.
+The future of AI isn't just one powerful assistant. It's **specialized agents working together**.
 
 We learned that orchestration, shared memory, transparency, and user experience are just as important as the underlying AI model.
 
-🔮 What's Next
+## 🔮 What's Next
 
-Genesis aims to become the operating system for AI-native businesses.
+Genesis aims to become the **operating system for AI-native businesses**.
 
 Future capabilities include:
 
@@ -70,20 +70,20 @@ Future capabilities include:
 - Continuous business optimization
 - Multi-founder collaboration
 
-🌐 Try Genesis
+## 🌐 Try Genesis
 
-Live Demo: https://genesis-five-mu.vercel.app
+**Live Demo:** https://genesis-five-mu.vercel.app
 
-🛠️ Built With
+## 🛠️ Built With
 
 Gemini · Google Cloud · Next.js · React · TypeScript · Tailwind CSS · Firebase · Firestore · BigQuery · Vercel
 
-📄 License
+## 📄 License
 
 MIT License
 
-👩‍💻 Developer
+## 👩‍💻 Developer
 
-Shambhavi
+**Shambhavi**
 
 GitHub: https://github.com/ShambhaviCode
