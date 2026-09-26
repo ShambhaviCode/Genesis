@@ -74,6 +74,22 @@ Future capabilities include:
 
 **Live Demo:** https://genesis-five-mu.vercel.app
 
+## 💻 Run Locally
+
+Requires Node.js 18.18+ and a free Gemini API key from
+[Google AI Studio](https://aistudio.google.com/apikey).
+
+```bash
+git clone https://github.com/ShambhaviCode/Genesis.git
+cd Genesis
+npm install
+cp .env.example .env.local   # then set GEMINI_API_KEY
+npm run dev
+```
+
+Open http://localhost:3000, describe an idea, and press **Ignite**.
+Generated plans are saved in your browser's localStorage.
+
 ## 🛠️ Built With
 
 Gemini · Google Cloud · Next.js · React · TypeScript · Tailwind CSS · Firebase · Firestore · BigQuery · Vercel
