@@ -28,6 +28,7 @@ export function IdeaForm({
         value={idea}
         onChange={(e) => setIdea(e.target.value)}
         disabled={disabled}
+        maxLength={4000}
         rows={4}
         placeholder="A subscription box that sends home baristas fresh single-origin beans from a different micro-roaster every month..."
         className="w-full resize-none rounded-lg border border-hairline bg-surface px-4 py-3 text-fg placeholder:text-fgmuted/70 outline-none focus:border-signal transition-colors disabled:opacity-50"

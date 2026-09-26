@@ -5,6 +5,9 @@ export const runtime = "nodejs";
 const GEMINI_URL =
   "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent";
 
+// Keep in sync with maxLength on the IdeaForm textarea.
+const MAX_IDEA_LENGTH = 4000;
+
 const RESPONSE_SCHEMA = {
   type: "object",
   properties: {
@@ -102,6 +105,13 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  if (idea.length > MAX_IDEA_LENGTH) {
+    return NextResponse.json(
+      { error: `Keep your idea under ${MAX_IDEA_LENGTH} characters.` },
+      { status: 400 }
+    );
+  }
+
   const prompt = `You are Genesis, a founding team of specialized AI agents (Research, Brand, Pricing, Website, Marketing, Roadmap) that turn a raw startup idea into a launch-ready plan.
 
 A founder describes their idea below. Produce the coordinated output of all six agents working together, staying consistent with each other (same company name and positioning throughout, pricing that matches the brand tier, marketing that matches the audience).
@@ -114,9 +124,11 @@ ${idea}
 Be specific and concrete. Avoid generic filler like "innovative solution" or "cutting-edge platform". Ground every field in the actual idea described.`;
 
   try {
-    const resp = await fetch(`${GEMINI_URL}?key=${apiKey}`, {
+    // Send the key as a header rather than a query parameter so it
+    // doesn't end up in request URLs that proxies and logs record.
+    const resp = await fetch(GEMINI_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
       body: JSON.stringify({
         contents: [{ role: "user", parts: [{ text: prompt }] }],
         generationConfig: {
